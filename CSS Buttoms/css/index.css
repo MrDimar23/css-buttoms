@@ -1,0 +1,66 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #333;
+}
+.buttoms{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   max-width: 270px;
+   gap: 60px;
+}
+.buttoms label {
+   position: relative;
+   width: 60px;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+.buttoms label input {
+   appearance: none;
+}
+.buttoms label span {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(#555353, #363535, #303030);
+   border: 2px solid #222;
+   border-radius: 6px;
+   box-shadow: inset 0 5px 1px rgba(0, 0, 0, 0.35),
+   inset 0 5px 5px rgba(0, 0, 0, 0.5),
+   inset 0 15px 25px rgba(0, 0, 0, 0.35);
+}
+.buttoms label input:checked ~ span {
+   box-shadow: inset 0 62px 62px rgba(0, 0, 0, 0.35),
+   0 5px 5px rgba(0, 0, 0, 0.5),
+   0 15px 25px rgba(0, 0, 0, 0.35);
+}
+
+.buttoms label span::before {
+   content: ' ';
+   position: absolute;
+   inset: 5px 3px;
+   border-top: 3px solid #ccc;
+   filter: blur(2px);
+}
+.buttoms label i {
+   position: relative;
+   z-index: 10;
+   font-size: 2.2em;
+   color: #000;
+}
+.buttoms label input:checked ~ i {
+   color: #fff;
+   text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
+}
